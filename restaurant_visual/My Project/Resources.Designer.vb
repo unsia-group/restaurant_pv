@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property all_menu() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("all_menu", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Ellipse_2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Ellipse 2", resourceCulture)
@@ -76,6 +86,36 @@ Namespace My.Resources
         Friend ReadOnly Property Ellipse_2_small() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Ellipse 2_small", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property exit_button() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("exit_button", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property exit_button_fix() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("exit_button_fix", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property minimize_btn() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("minimize_btn", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

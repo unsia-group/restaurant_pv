@@ -134,5 +134,17 @@
   <ItemGroup>
     <None Include="Resources\Ellipse 2_small.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_button_fix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_btn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

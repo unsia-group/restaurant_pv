@@ -53,6 +53,7 @@ Partial Class splash_screen
         Me.Controls.Add(Me.logo_splash)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "splash_screen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         CType(Me.logo_splash, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
