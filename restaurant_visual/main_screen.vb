@@ -18,4 +18,12 @@
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+
+    End Sub
+
+    Private Sub burgers_btn_Paint(sender As Object, e As PaintEventArgs) Handles burgers_btn.Paint
+
+    End Sub
 End Class
