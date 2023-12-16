@@ -1,13 +1,17 @@
 ﻿Public Class main_screen
     Private Sub main_screen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        main_panel.Show()
+        burger_panel.Hide()
+        pizza_panel.Hide()
+        hotdog_panel.Hide()
+        drink_panel.Hide()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles breadcump_label.Click
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles menu_label_1.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -19,11 +23,57 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub burgers_btn_Paint(sender As Object, e As PaintEventArgs) Handles burgers_btn.Paint
+    Private Sub all_menu_btn_Click(sender As Object, e As EventArgs) Handles all_menu_btn.Click
+        breadcump_label.Text = "All Menu"
+        burger_panel.Hide()
+        pizza_panel.Hide()
+        hotdog_panel.Hide()
+        drink_panel.Hide()
 
+        main_panel.Show()
+    End Sub
+
+    Private Sub burger_btn_Click(sender As Object, e As EventArgs) Handles burger_btn.Click
+        breadcump_label.Text = "Burger"
+        main_panel.Hide()
+        pizza_panel.Hide()
+        hotdog_panel.Hide()
+        drink_panel.Hide()
+
+        burger_panel.Show()
+    End Sub
+
+    Private Sub HOTDOG_BTN_Click(sender As Object, e As EventArgs) Handles HOTDOG_BTN.Click
+        breadcump_label.Text = "Hotdog"
+        main_panel.Hide()
+        pizza_panel.Hide()
+        drink_panel.Hide()
+        burger_panel.Hide()
+
+        hotdog_panel.Show()
+    End Sub
+
+    Private Sub drinks_btn_Click(sender As Object, e As EventArgs) Handles drinks_btn.Click
+        breadcump_label.Text = "Drink"
+        main_panel.Hide()
+        pizza_panel.Hide()
+        hotdog_panel.Hide()
+        burger_panel.Hide()
+
+        drink_panel.Show()
+    End Sub
+
+    Private Sub pizza_btn_Click(sender As Object, e As EventArgs) Handles pizza_btn.Click
+        breadcump_label.Text = "Pizza"
+        main_panel.Hide()
+        hotdog_panel.Hide()
+        burger_panel.Hide()
+        drink_panel.Hide()
+
+        pizza_panel.Show()
     End Sub
 End Class
