@@ -9,4 +9,8 @@
         main_screen.Show()
         Me.Hide()
     End Sub
+
+    Private Sub logo_splash_Click(sender As Object, e As EventArgs) Handles logo_splash.Click
+
+    End Sub
 End Class
