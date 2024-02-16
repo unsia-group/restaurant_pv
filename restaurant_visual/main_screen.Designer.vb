@@ -37,7 +37,7 @@ Partial Class main_screen
         Me.main_panel = New System.Windows.Forms.Panel()
         Me.btn_order = New System.Windows.Forms.Button()
         Me.panel_price = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label_Count = New System.Windows.Forms.Label()
         Me.Label_price = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -278,7 +278,7 @@ Partial Class main_screen
         'panel_price
         '
         Me.panel_price.BackColor = System.Drawing.Color.White
-        Me.panel_price.Controls.Add(Me.Label3)
+        Me.panel_price.Controls.Add(Me.Label_Count)
         Me.panel_price.Controls.Add(Me.Label_price)
         Me.panel_price.Controls.Add(Me.Label2)
         Me.panel_price.Location = New System.Drawing.Point(309, 708)
@@ -287,17 +287,17 @@ Partial Class main_screen
         Me.panel_price.Size = New System.Drawing.Size(611, 49)
         Me.panel_price.TabIndex = 2
         '
-        'Label3
+        'Label_Count
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(277, 12)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 25)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Rp. 0"
+        Me.Label_Count.AutoSize = True
+        Me.Label_Count.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Count.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label_Count.Location = New System.Drawing.Point(277, 12)
+        Me.Label_Count.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label_Count.Name = "Label_Count"
+        Me.Label_Count.Size = New System.Drawing.Size(65, 25)
+        Me.Label_Count.TabIndex = 2
+        Me.Label_Count.Text = "0 Item"
         '
         'Label_price
         '
@@ -520,5 +520,5 @@ Partial Class main_screen
     Friend WithEvents Label_price As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btn_order As Button
-    Friend WithEvents Label3 As Label
+    Friend WithEvents Label_Count As Label
 End Class

@@ -169,11 +169,15 @@ Public Class main_screen
 
         ' Opsi: Lakukan kalkulasi atau update UI berdasarkan list clickedItems
         Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value)
+        Dim totalItem As Integer = selectedItem.Count()
+
         Label_price.Text = "Rp. " + (totalValue.ToString)
+        Label_Count.Text = (totalItem.ToString) + " Item"
     End Sub
 
     Private Sub clear_btn_Click(sender As Object, e As EventArgs) Handles clear_btn.Click
         Label_price.Text = "Rp. 0"
+        Label_Count.Text = "0 Item"
 
         selectedItem.Clear()
     End Sub
