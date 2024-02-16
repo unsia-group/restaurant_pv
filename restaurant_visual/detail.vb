@@ -1,6 +1,12 @@
 ﻿Public Class detail
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public selectedItem As New List(Of ItemObject)()
+    Public isTakeaway As Boolean
 
+    Private Sub Button_DineIn_Click(sender As Object, e As EventArgs) Handles Button_DineIn.Click
+        isTakeaway = False
+    End Sub
+    Private Sub Button_Takeaway_Click(sender As Object, e As EventArgs) Handles Button_Takeaway.Click
+        isTakeaway = True
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

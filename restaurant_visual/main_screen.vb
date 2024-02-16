@@ -1,11 +1,12 @@
 ﻿Imports System.Drawing.Printing
 Imports System.IO
 Imports System.Net.Http
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Tab
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
 Public Class main_screen
-    Private selectedItem As New List(Of ItemObject)()
+    Public selectedItem As New List(Of ItemObject)()
 
     Private Sub main_screen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         main_panel.Show()
@@ -76,7 +77,10 @@ Public Class main_screen
     End Sub
 
     Private Sub btn_order_Click(sender As Object, e As EventArgs) Handles btn_order.Click
-        detail.Show()
+        Dim detailShow As New detail()
+        detailShow.selectedItem = selectedItem
+        detailShow.Show()
+
         Me.Hide()
     End Sub
     Async Sub LoadListBurger()
@@ -164,15 +168,24 @@ Public Class main_screen
             item.Name = clickedControl.Parent.Controls.OfType(Of Label)().FirstOrDefault()?.Text
         End If
 
-        ' Menambahkan objek item ke list
-        selectedItem.Add(item)
+        ' Validation: Check if the item already exists in selectedItem list
+        Dim existingItem = selectedItem.FirstOrDefault(Function(i) i.Value = item.Value AndAlso i.Name = item.Name)
+        If existingItem Is Nothing Then
+            ' Jika item belum ada, tambahkan dengan count 1
+            item.Count = 1
+            selectedItem.Add(item)
+        Else
+            ' Jika item sudah ada, tingkatkan count
+            existingItem.Count += 1
+        End If
 
         ' Opsi: Lakukan kalkulasi atau update UI berdasarkan list clickedItems
-        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value)
-        Dim totalItem As Integer = selectedItem.Count()
+        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value * i.Count)
+        Dim totalItem As Integer = selectedItem.Sum(Function(i) i.Count)
 
-        Label_price.Text = "Rp. " + (totalValue.ToString)
-        Label_Count.Text = (totalItem.ToString) + " Item"
+        ' Update label untuk harga total dan jumlah item
+        Label_price.Text = "Rp. " + totalValue.ToString()
+        Label_Count.Text = totalItem.ToString() + " Item"
     End Sub
 
     Private Sub clear_btn_Click(sender As Object, e As EventArgs) Handles clear_btn.Click
@@ -185,4 +198,5 @@ End Class
 Public Class ItemObject
     Public Property Name As String
     Public Property Value As Integer
+    Public Property Count As Integer
 End Class
