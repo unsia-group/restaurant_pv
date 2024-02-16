@@ -73,6 +73,34 @@ Public Class main_screen
 
         Me.Hide()
     End Sub
+
+    Private Async Function loadListItem(item As JObject) As Task(Of Panel)
+        Dim itemPanel As New Panel
+        itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
+
+        ' Membuat label untuk nama item
+        Dim nameLabel As New Label()
+        nameLabel = SetupNameLabel(item)
+
+        Dim priceLabel As New Label()
+        priceLabel = SetupPriceLabel(item)
+
+        ' Membuat PictureBox untuk gambar
+        Dim pictureBox As New PictureBox()
+        pictureBox = Await SetupPictureBoxLabel(item)
+
+        itemPanel.Controls.Add(pictureBox)
+        itemPanel.Controls.Add(nameLabel)
+        itemPanel.Controls.Add(priceLabel)
+
+        itemPanel.Tag = item("price").ToObject(Of Integer)()
+        AddHandler itemPanel.Click, AddressOf ItemPanel_Click
+        AddHandler nameLabel.Click, AddressOf ItemPanel_Click
+        AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+
+        Return itemPanel
+    End Function
+
     Async Sub LoadListBurger()
         Dim filePath As String = "Resources/json/list_burger.json"
 
@@ -82,28 +110,7 @@ Public Class main_screen
             Dim listBurger As JArray = jsonObject("list_burger")
 
             For Each burger As JObject In listBurger
-                Dim itemPanel As New Panel
-                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
-
-                ' Membuat label untuk nama item
-                Dim nameLabel As New Label()
-                nameLabel = SetupNameLabel(burger)
-
-                Dim priceLabel As New Label()
-                priceLabel = SetupPriceLabel(burger)
-
-                ' Membuat PictureBox untuk gambar
-                Dim pictureBox As New PictureBox()
-                pictureBox = Await SetupPictureBoxLabel(burger)
-
-                itemPanel.Controls.Add(pictureBox)
-                itemPanel.Controls.Add(nameLabel)
-                itemPanel.Controls.Add(priceLabel)
-
-                itemPanel.Tag = burger("price").ToObject(Of Integer)()
-                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
-                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
-                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+                Dim itemPanel = Await loadListItem(burger)
 
                 FlowLayoutPanel1.Controls.Add(itemPanel)
             Next
@@ -121,28 +128,7 @@ Public Class main_screen
             Dim listPizza As JArray = jsonObject("list_pizza")
 
             For Each pizza As JObject In listPizza
-                Dim itemPanel As New Panel
-                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
-
-                ' Membuat label untuk nama item
-                Dim nameLabel As New Label()
-                nameLabel = SetupNameLabel(pizza)
-
-                Dim priceLabel As New Label()
-                priceLabel = SetupPriceLabel(pizza)
-
-                ' Membuat PictureBox untuk gambar
-                Dim pictureBox As New PictureBox()
-                pictureBox = Await SetupPictureBoxLabel(pizza)
-
-                itemPanel.Controls.Add(pictureBox)
-                itemPanel.Controls.Add(nameLabel)
-                itemPanel.Controls.Add(priceLabel)
-
-                itemPanel.Tag = pizza("price").ToObject(Of Integer)()
-                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
-                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
-                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+                Dim itemPanel = Await loadListItem(pizza)
 
                 FlowLayoutPanel1.Controls.Add(itemPanel)
             Next
@@ -160,28 +146,7 @@ Public Class main_screen
             Dim listHotdog As JArray = jsonObject("list_hotdog")
 
             For Each hotdog As JObject In listHotdog
-                Dim itemPanel As New Panel
-                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
-
-                ' Membuat label untuk nama item
-                Dim nameLabel As New Label()
-                nameLabel = SetupNameLabel(hotdog)
-
-                Dim priceLabel As New Label()
-                priceLabel = SetupPriceLabel(hotdog)
-
-                ' Membuat PictureBox untuk gambar
-                Dim pictureBox As New PictureBox()
-                pictureBox = Await SetupPictureBoxLabel(hotdog)
-
-                itemPanel.Controls.Add(pictureBox)
-                itemPanel.Controls.Add(nameLabel)
-                itemPanel.Controls.Add(priceLabel)
-
-                itemPanel.Tag = hotdog("price").ToObject(Of Integer)()
-                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
-                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
-                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+                Dim itemPanel = Await loadListItem(hotdog)
 
                 FlowLayoutPanel1.Controls.Add(itemPanel)
             Next
@@ -199,28 +164,7 @@ Public Class main_screen
             Dim listDrink As JArray = jsonObject("list_drink")
 
             For Each drink As JObject In listDrink
-                Dim itemPanel As New Panel
-                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
-
-                ' Membuat label untuk nama item
-                Dim nameLabel As New Label()
-                nameLabel = SetupNameLabel(drink)
-
-                Dim priceLabel As New Label()
-                priceLabel = SetupPriceLabel(drink)
-
-                ' Membuat PictureBox untuk gambar
-                Dim pictureBox As New PictureBox()
-                pictureBox = Await SetupPictureBoxLabel(drink)
-
-                itemPanel.Controls.Add(pictureBox)
-                itemPanel.Controls.Add(nameLabel)
-                itemPanel.Controls.Add(priceLabel)
-
-                itemPanel.Tag = drink("price").ToObject(Of Integer)()
-                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
-                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
-                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+                Dim itemPanel = Await loadListItem(drink)
 
                 FlowLayoutPanel1.Controls.Add(itemPanel)
             Next
