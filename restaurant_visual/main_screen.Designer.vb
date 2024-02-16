@@ -308,6 +308,7 @@ Partial Class main_screen
         '
         'FlowLayoutPanel1
         '
+        Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel1)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 212)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
