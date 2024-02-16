@@ -1,0 +1,24 @@
+﻿{
+  "list_burger": [
+    {
+      "name": "Classic Burger",
+      "price": "20000",
+      "image": "https://source.unsplash.com/random/500x500?classic-burger"
+    },
+    {
+      "name": "Onion Burger",
+      "price": "23000",
+      "image": "https://source.unsplash.com/random/500x500?onion-burger"
+    },
+    {
+      "name": "Greek Burger",
+      "price": "23000",
+      "image": "https://source.unsplash.com/random/500x500?greek-burger"
+    },
+    {
+      "name": "Chicken Burger",
+      "price": "25000",
+      "image": "https://source.unsplash.com/random/500x500?chicken-burger"
+    }
+  ]
+}

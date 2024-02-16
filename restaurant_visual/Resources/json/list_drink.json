@@ -1,0 +1,24 @@
+﻿{
+  "list_burger": [
+    {
+      "name": "Ice Tea",
+      "price": "20000",
+      "image": ""
+    },
+    {
+      "name": "Coffee",
+      "price": "20000",
+      "image": ""
+    },
+    {
+      "name": "Orange Juice",
+      "price": "20000",
+      "image": ""
+    },
+    {
+      "name": "Milk",
+      "price": "20000",
+      "image": ""
+    }
+  ]
+}

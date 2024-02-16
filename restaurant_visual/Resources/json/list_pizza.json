@@ -1,0 +1,24 @@
+﻿{
+  "list_pizza": [
+    {
+      "name": "Pizza Mozzarella",
+      "price": "30000",
+      "image": "https://source.unsplash.com/random/500x500?pizza-mozzarella"
+    },
+    {
+      "name": "Pizza Pepperoni",
+      "price": "33000",
+      "image": "https://source.unsplash.com/random/500x500?pizza-pepperoni"
+    },
+    {
+      "name": "Pizza Anchovy",
+      "price": "33000",
+      "image": "https://source.unsplash.com/random/500x500?pizza-anchovy"
+    },
+    {
+      "name": "Pizza Cheese",
+      "price": "35000",
+      "image": "https://source.unsplash.com/random/500x500?pizza-cheese"
+    }
+  ]
+}

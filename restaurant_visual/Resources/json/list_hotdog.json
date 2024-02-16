@@ -1,0 +1,24 @@
+﻿{
+  "list_hotdog": [
+    {
+      "name": "Classic Hotdog",
+      "price": "20000",
+      "image": ""
+    },
+    {
+      "name": "Chili Hotdog",
+      "price": "24000",
+      "image": ""
+    },
+    {
+      "name": "Cheese Hotdog",
+      "price": "24000",
+      "image": ""
+    },
+    {
+      "name": "Chili Cheese Hotdog",
+      "price": "30000",
+      "image": ""
+    }
+  ]
+}
