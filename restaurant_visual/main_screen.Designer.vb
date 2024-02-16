@@ -47,10 +47,6 @@ Partial Class main_screen
         Me.burger_1 = New System.Windows.Forms.Button()
         Me.clear_btn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.burger_panel = New System.Windows.Forms.Panel()
-        Me.pizza_panel = New System.Windows.Forms.Panel()
-        Me.hotdog_panel = New System.Windows.Forms.Panel()
-        Me.drink_panel = New System.Windows.Forms.Panel()
         Me.panel_menu.SuspendLayout()
         Me.MenuGroup.SuspendLayout()
         CType(Me.logo_side_menu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -389,46 +385,6 @@ Partial Class main_screen
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'burger_panel
-        '
-        Me.burger_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.burger_panel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.burger_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.burger_panel.Location = New System.Drawing.Point(208, 45)
-        Me.burger_panel.Name = "burger_panel"
-        Me.burger_panel.Size = New System.Drawing.Size(917, 627)
-        Me.burger_panel.TabIndex = 2
-        '
-        'pizza_panel
-        '
-        Me.pizza_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.pizza_panel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pizza_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.pizza_panel.Location = New System.Drawing.Point(208, 45)
-        Me.pizza_panel.Name = "pizza_panel"
-        Me.pizza_panel.Size = New System.Drawing.Size(917, 627)
-        Me.pizza_panel.TabIndex = 3
-        '
-        'hotdog_panel
-        '
-        Me.hotdog_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.hotdog_panel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.hotdog_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.hotdog_panel.Location = New System.Drawing.Point(208, 45)
-        Me.hotdog_panel.Name = "hotdog_panel"
-        Me.hotdog_panel.Size = New System.Drawing.Size(917, 627)
-        Me.hotdog_panel.TabIndex = 4
-        '
-        'drink_panel
-        '
-        Me.drink_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.drink_panel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.drink_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.drink_panel.Location = New System.Drawing.Point(208, 45)
-        Me.drink_panel.Name = "drink_panel"
-        Me.drink_panel.Size = New System.Drawing.Size(917, 627)
-        Me.drink_panel.TabIndex = 5
-        '
         'main_screen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -436,10 +392,6 @@ Partial Class main_screen
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1125, 672)
         Me.Controls.Add(Me.main_panel)
-        Me.Controls.Add(Me.drink_panel)
-        Me.Controls.Add(Me.hotdog_panel)
-        Me.Controls.Add(Me.pizza_panel)
-        Me.Controls.Add(Me.burger_panel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.panel_menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -472,15 +424,11 @@ Partial Class main_screen
     Friend WithEvents MenuGroup As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents burger_panel As Panel
     Friend WithEvents all_menu_btn As Button
     Friend WithEvents burger_btn As Button
     Friend WithEvents pizza_btn As Button
     Friend WithEvents HOTDOG_BTN As Button
     Friend WithEvents drinks_btn As Button
-    Friend WithEvents pizza_panel As Panel
-    Friend WithEvents hotdog_panel As Panel
-    Friend WithEvents drink_panel As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Panel1 As Panel
