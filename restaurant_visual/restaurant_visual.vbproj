@@ -88,9 +88,15 @@
     <Compile Include="main_screen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <None Include="Resources\json\list_hotdog.json" />
-    <None Include="Resources\json\list_drink.json" />
-    <None Include="Resources\json\list_pizza.json" />
+    <None Include="Resources\json\list_hotdog.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\json\list_drink.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\json\list_pizza.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\json\list_burger.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -1,24 +1,24 @@
 ﻿{
-  "list_burger": [
+  "list_drink": [
     {
       "name": "Ice Tea",
       "price": "20000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?drink-icea-tea"
     },
     {
       "name": "Coffee",
       "price": "20000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?drink-coffee"
     },
     {
       "name": "Orange Juice",
       "price": "20000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?drink-orange-juice"
     },
     {
       "name": "Milk",
       "price": "20000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?drink-milk"
     }
   ]
 }
