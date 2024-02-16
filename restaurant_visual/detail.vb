@@ -4,9 +4,13 @@
 
     Private Sub Button_DineIn_Click(sender As Object, e As EventArgs) Handles Button_DineIn.Click
         isTakeaway = False
+        order.Show()
+        Me.Hide()
     End Sub
     Private Sub Button_Takeaway_Click(sender As Object, e As EventArgs) Handles Button_Takeaway.Click
         isTakeaway = True
+        order.Show()
+        Me.Hide()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click

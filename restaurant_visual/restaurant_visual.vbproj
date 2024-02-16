@@ -94,6 +94,12 @@
     <None Include="Resources\json\list_burger.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="order.Designer.vb">
+      <DependentUpon>order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="order.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="splash_screen.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="main_screen.resx">
       <DependentUpon>main_screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order.resx">
+      <DependentUpon>order.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash_screen.resx">
       <DependentUpon>splash_screen.vb</DependentUpon>

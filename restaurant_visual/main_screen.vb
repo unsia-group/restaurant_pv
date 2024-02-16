@@ -194,6 +194,10 @@ Public Class main_screen
 
         selectedItem.Clear()
     End Sub
+
+    Private Sub logo_side_menu_Click(sender As Object, e As EventArgs) Handles logo_side_menu.Click
+
+    End Sub
 End Class
 Public Class ItemObject
     Public Property Name As String
