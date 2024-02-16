@@ -37,6 +37,7 @@ Partial Class main_screen
         Me.main_panel = New System.Windows.Forms.Panel()
         Me.btn_order = New System.Windows.Forms.Button()
         Me.panel_price = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label_price = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
@@ -44,7 +45,7 @@ Partial Class main_screen
         Me.Label1 = New System.Windows.Forms.Label()
         Me.burger1label = New System.Windows.Forms.Label()
         Me.burger_1 = New System.Windows.Forms.Button()
-        Me.cancel_btn = New System.Windows.Forms.Button()
+        Me.clear_btn = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.burger_panel = New System.Windows.Forms.Panel()
         Me.pizza_panel = New System.Windows.Forms.Panel()
@@ -252,7 +253,7 @@ Partial Class main_screen
         Me.main_panel.Controls.Add(Me.btn_order)
         Me.main_panel.Controls.Add(Me.panel_price)
         Me.main_panel.Controls.Add(Me.FlowLayoutPanel1)
-        Me.main_panel.Controls.Add(Me.cancel_btn)
+        Me.main_panel.Controls.Add(Me.clear_btn)
         Me.main_panel.Controls.Add(Me.PictureBox1)
         Me.main_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.main_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -277,6 +278,7 @@ Partial Class main_screen
         'panel_price
         '
         Me.panel_price.BackColor = System.Drawing.Color.White
+        Me.panel_price.Controls.Add(Me.Label3)
         Me.panel_price.Controls.Add(Me.Label_price)
         Me.panel_price.Controls.Add(Me.Label2)
         Me.panel_price.Location = New System.Drawing.Point(309, 708)
@@ -285,12 +287,24 @@ Partial Class main_screen
         Me.panel_price.Size = New System.Drawing.Size(611, 49)
         Me.panel_price.TabIndex = 2
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(277, 12)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 25)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Rp. 0"
+        '
         'Label_price
         '
         Me.Label_price.AutoSize = True
         Me.Label_price.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label_price.Location = New System.Drawing.Point(493, 11)
+        Me.Label_price.Location = New System.Drawing.Point(458, 12)
         Me.Label_price.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_price.Name = "Label_price"
         Me.Label_price.Size = New System.Drawing.Size(57, 25)
@@ -375,17 +389,17 @@ Partial Class main_screen
         Me.burger_1.TabIndex = 0
         Me.burger_1.UseVisualStyleBackColor = True
         '
-        'cancel_btn
+        'clear_btn
         '
-        Me.cancel_btn.BackColor = System.Drawing.Color.Red
-        Me.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cancel_btn.Location = New System.Drawing.Point(19, 708)
-        Me.cancel_btn.Margin = New System.Windows.Forms.Padding(4)
-        Me.cancel_btn.Name = "cancel_btn"
-        Me.cancel_btn.Size = New System.Drawing.Size(267, 49)
-        Me.cancel_btn.TabIndex = 1
-        Me.cancel_btn.Text = "CANCEL"
-        Me.cancel_btn.UseVisualStyleBackColor = False
+        Me.clear_btn.BackColor = System.Drawing.Color.Red
+        Me.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.clear_btn.Location = New System.Drawing.Point(19, 708)
+        Me.clear_btn.Margin = New System.Windows.Forms.Padding(4)
+        Me.clear_btn.Name = "clear_btn"
+        Me.clear_btn.Size = New System.Drawing.Size(267, 49)
+        Me.clear_btn.TabIndex = 1
+        Me.clear_btn.Text = "RESET"
+        Me.clear_btn.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -501,9 +515,10 @@ Partial Class main_screen
     Friend WithEvents burger_1 As Button
     Friend WithEvents burger1label As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents cancel_btn As Button
+    Friend WithEvents clear_btn As Button
     Friend WithEvents panel_price As Panel
     Friend WithEvents Label_price As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents btn_order As Button
+    Friend WithEvents Label3 As Label
 End Class

@@ -3,7 +3,9 @@ Imports System.IO
 Imports System.Net.Http
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
+
 Public Class main_screen
+    Private selectedItem As New List(Of ItemObject)()
 
     Private Sub main_screen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         main_panel.Show()
@@ -150,17 +152,33 @@ Public Class main_screen
 
     Private Sub ItemPanel_Click(sender As Object, e As EventArgs)
         Dim clickedControl As Control = CType(sender, Control)
-        Dim value As Integer
+        Dim item As New ItemObject
 
         ' Cek apakah sender adalah panel atau kontrol di dalam panel
         If TypeOf clickedControl Is Panel Then
-            value = CInt(clickedControl.Tag)
+            item.Value = CInt(clickedControl.Tag)
+            item.Name = clickedControl.Controls.OfType(Of Label)().FirstOrDefault()?.Text
         Else
-            ' Untuk kontrol di dalam panel, dapatkan panel parent
-            value = CInt(clickedControl.Parent.Tag)
+            ' Untuk kontrol di dalam panel, dapatkan panel parent dan informasi item
+            item.Value = CInt(clickedControl.Parent.Tag)
+            item.Name = clickedControl.Parent.Controls.OfType(Of Label)().FirstOrDefault()?.Text
         End If
 
-        ' Lakukan kalkulasi atau tindakan lain dengan value
-        MessageBox.Show($"Nilai item yang diklik: {value}")
+        ' Menambahkan objek item ke list
+        selectedItem.Add(item)
+
+        ' Opsi: Lakukan kalkulasi atau update UI berdasarkan list clickedItems
+        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value)
+        Label_price.Text = "Rp. " + (totalValue.ToString)
     End Sub
+
+    Private Sub clear_btn_Click(sender As Object, e As EventArgs) Handles clear_btn.Click
+        Label_price.Text = "Rp. 0"
+
+        selectedItem.Clear()
+    End Sub
+End Class
+Public Class ItemObject
+    Public Property Name As String
+    Public Property Value As Integer
 End Class
