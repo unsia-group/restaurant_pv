@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Net.Http
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Tab
+Imports System.Xml
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
@@ -15,7 +16,10 @@ Public Class main_screen
         hotdog_panel.Hide()
         drink_panel.Hide()
 
+        FlowLayoutPanel1.Controls.Clear()
         LoadListBurger()
+        LoadListPizza()
+        LoadListHotdog()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -91,40 +95,20 @@ Public Class main_screen
             Dim jsonObject As Object = JsonConvert.DeserializeObject(jsonString)
             Dim listBurger As JArray = jsonObject("list_burger")
 
-            FlowLayoutPanel1.Controls.Clear()
-
             For Each burger As JObject In listBurger
                 Dim itemPanel As New Panel
                 itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
 
                 ' Membuat label untuk nama item
                 Dim nameLabel As New Label()
-                nameLabel.Text = burger("name").ToString()
-                nameLabel.AutoSize = True
-                nameLabel.Location = New Point(23, 118) ' Posisi label di atas gambar
-                nameLabel.ForeColor = Color.Black
-                nameLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+                nameLabel = SetupNameLabel(burger)
 
                 Dim priceLabel As New Label()
-                priceLabel.Text = "Rp. " + burger("price").ToString()
-                priceLabel.AutoSize = True
-                priceLabel.Location = New Point(23, 142) ' Posisi label di atas gambar
-                priceLabel.ForeColor = Color.Black
-                nameLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+                priceLabel = SetupPriceLabel(burger)
 
                 ' Membuat PictureBox untuk gambar
                 Dim pictureBox As New PictureBox()
-                pictureBox.Location = New Point(0, 0) ' Posisi gambar di bawah label
-                pictureBox.Size = New Size(100, 100)
-                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage
-                pictureBox.Anchor = AnchorStyles.Top Or AnchorStyles.Left
-
-                ' Memuat gambar dari Unsplash atau path lokal
-                Dim imagePath As String = burger("image").ToString()
-                If imagePath.StartsWith("http") Then
-                    ' Memuat gambar dari URL
-                    pictureBox.Image = Await LoadImageFromUrlAsync(imagePath)
-                End If
+                pictureBox = Await SetupPictureBoxLabel(burger)
 
                 itemPanel.Controls.Add(pictureBox)
                 itemPanel.Controls.Add(nameLabel)
@@ -142,6 +126,123 @@ Public Class main_screen
         End If
     End Sub
 
+    Async Sub LoadListPizza()
+        Dim filePath As String = "Resources/json/list_pizza.json"
+
+        If File.Exists(filePath) Then
+            Dim jsonString As String = File.ReadAllText(filePath)
+            Dim jsonObject As Object = JsonConvert.DeserializeObject(jsonString)
+            Dim listPizza As JArray = jsonObject("list_pizza")
+
+            For Each pizza As JObject In listPizza
+                Dim itemPanel As New Panel
+                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
+
+                ' Membuat label untuk nama item
+                Dim nameLabel As New Label()
+                nameLabel = SetupNameLabel(pizza)
+
+                Dim priceLabel As New Label()
+                priceLabel = SetupPriceLabel(pizza)
+
+                ' Membuat PictureBox untuk gambar
+                Dim pictureBox As New PictureBox()
+                pictureBox = Await SetupPictureBoxLabel(pizza)
+
+                itemPanel.Controls.Add(pictureBox)
+                itemPanel.Controls.Add(nameLabel)
+                itemPanel.Controls.Add(priceLabel)
+
+                itemPanel.Tag = pizza("price").ToObject(Of Integer)()
+                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
+                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
+                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+
+                FlowLayoutPanel1.Controls.Add(itemPanel)
+            Next
+        Else
+            Console.WriteLine("File pizza list does not exist.")
+        End If
+    End Sub
+
+    Async Sub LoadListHotdog()
+        Dim filePath As String = "Resources/json/list_hotdog.json"
+
+        If File.Exists(filePath) Then
+            Dim jsonString As String = File.ReadAllText(filePath)
+            Dim jsonObject As Object = JsonConvert.DeserializeObject(jsonString)
+            Dim listHotdog As JArray = jsonObject("list_hotdog")
+
+            For Each hotdog As JObject In listHotdog
+                Dim itemPanel As New Panel
+                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
+
+                ' Membuat label untuk nama item
+                Dim nameLabel As New Label()
+                nameLabel = SetupNameLabel(hotdog)
+
+                Dim priceLabel As New Label()
+                priceLabel = SetupPriceLabel(hotdog)
+
+                ' Membuat PictureBox untuk gambar
+                Dim pictureBox As New PictureBox()
+                pictureBox = Await SetupPictureBoxLabel(hotdog)
+
+                itemPanel.Controls.Add(pictureBox)
+                itemPanel.Controls.Add(nameLabel)
+                itemPanel.Controls.Add(priceLabel)
+
+                itemPanel.Tag = hotdog("price").ToObject(Of Integer)()
+                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
+                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
+                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+
+                FlowLayoutPanel1.Controls.Add(itemPanel)
+            Next
+        Else
+            Console.WriteLine("File hotdog list does not exist.")
+        End If
+    End Sub
+
+    Async Sub LoadListDrink()
+        Dim filePath As String = "Resources/json/list_drink.json"
+
+        If File.Exists(filePath) Then
+            Dim jsonString As String = File.ReadAllText(filePath)
+            Dim jsonObject As Object = JsonConvert.DeserializeObject(jsonString)
+            Dim listDrink As JArray = jsonObject("list_drink")
+
+            For Each drink As JObject In listDrink
+                Dim itemPanel As New Panel
+                itemPanel.Size = New Size(140, 175) ' Sesuaikan ukuran sesuai kebutuhan
+
+                ' Membuat label untuk nama item
+                Dim nameLabel As New Label()
+                nameLabel = SetupNameLabel(drink)
+
+                Dim priceLabel As New Label()
+                priceLabel = SetupPriceLabel(drink)
+
+                ' Membuat PictureBox untuk gambar
+                Dim pictureBox As New PictureBox()
+                pictureBox = Await SetupPictureBoxLabel(drink)
+
+                itemPanel.Controls.Add(pictureBox)
+                itemPanel.Controls.Add(nameLabel)
+                itemPanel.Controls.Add(priceLabel)
+
+                itemPanel.Tag = drink("price").ToObject(Of Integer)()
+                AddHandler itemPanel.Click, AddressOf ItemPanel_Click
+                AddHandler nameLabel.Click, AddressOf ItemPanel_Click
+                AddHandler pictureBox.Click, AddressOf ItemPanel_Click
+
+                FlowLayoutPanel1.Controls.Add(itemPanel)
+            Next
+        Else
+            Console.WriteLine("File drink list does not exist.")
+        End If
+    End Sub
+
     Private Async Function LoadImageFromUrlAsync(url As String) As Task(Of Image)
         Using client As New HttpClient()
             Dim response As HttpResponseMessage = Await client.GetAsync(url)
@@ -152,6 +253,46 @@ Public Class main_screen
                 Return Nothing
             End If
         End Using
+    End Function
+
+    Private Function SetupNameLabel(item) As Label
+        Dim nameLabel As New Label()
+        nameLabel.Text = item("name").ToString()
+        nameLabel.AutoSize = True
+        nameLabel.Location = New Point(23, 118) ' Posisi label di atas gambar
+        nameLabel.ForeColor = Color.Black
+        nameLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+
+        Return nameLabel
+    End Function
+
+    Private Function SetupPriceLabel(item) As Label
+        Dim priceLabel As New Label()
+        priceLabel.Text = "Rp. " + item("price").ToString()
+        priceLabel.AutoSize = True
+        priceLabel.Location = New Point(23, 142) ' Posisi label di atas gambar
+        priceLabel.ForeColor = Color.Black
+        priceLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+
+        Return priceLabel
+    End Function
+
+    Private Async Function SetupPictureBoxLabel(item) As Task(Of PictureBox)
+        ' Membuat PictureBox untuk gambar
+        Dim pictureBox As New PictureBox()
+        pictureBox.Location = New Point(0, 0) ' Posisi gambar di bawah label
+        pictureBox.Size = New Size(100, 100)
+        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+        pictureBox.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+
+        ' Memuat gambar dari Unsplash atau path lokal
+        Dim imagePath As String = item("image").ToString()
+        If imagePath.StartsWith("http") Then
+            ' Memuat gambar dari URL
+            pictureBox.Image = Await LoadImageFromUrlAsync(imagePath)
+        End If
+
+        Return pictureBox
     End Function
 
     Private Sub ItemPanel_Click(sender As Object, e As EventArgs)

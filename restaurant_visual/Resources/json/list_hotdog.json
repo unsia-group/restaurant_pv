@@ -3,22 +3,22 @@
     {
       "name": "Classic Hotdog",
       "price": "20000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?Classic-Hotdog"
     },
     {
       "name": "Chili Hotdog",
       "price": "24000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?Chili-Hotdog"
     },
     {
       "name": "Cheese Hotdog",
       "price": "24000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?Cheese-Hotdog"
     },
     {
       "name": "Chili Cheese Hotdog",
       "price": "30000",
-      "image": ""
+      "image": "https://source.unsplash.com/random/500x500?Chili-Cheese-Hotdog"
     }
   ]
 }
