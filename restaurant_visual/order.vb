@@ -34,7 +34,7 @@ Public Class order
 
     Private Function loadListItem(item As ItemObject) As Panel
         Dim itemPanel As New Panel
-        itemPanel.Size = New Size(1028, 90) ' Sesuaikan ukuran sesuai kebutuhan
+        itemPanel.Size = New Size(771,73) ' Sesuaikan ukuran sesuai kebutuhan
 
         ' Membuat label untuk nama item
         Dim nameLabel As New Label()
@@ -57,8 +57,8 @@ Public Class order
         Dim nameLabel As New Label()
         nameLabel.Text = item.Name
         nameLabel.AutoSize = True
-        nameLabel.Location = New Point(165, 30) ' Posisi label di atas gambar
-        nameLabel.ForeColor = Color.Black
+        nameLabel.Location = New Point(19, 19) ' Posisi label di atas gambar
+        nameLabel.ForeColor = Color.White
         nameLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
         nameLabel.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
 
@@ -69,8 +69,8 @@ Public Class order
         Dim countLabel As New Label()
         countLabel.Text = item.Count.ToString
         countLabel.AutoSize = True
-        countLabel.Location = New Point(165, 49) ' Posisi label di atas gambar
-        countLabel.ForeColor = Color.Black
+        countLabel.Location = New Point(19, 40) ' Posisi label di atas gambar
+        countLabel.ForeColor = Color.White
         countLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
         countLabel.Font = New Font("Microsoft Sans Serif", 8.25)
 
@@ -81,8 +81,8 @@ Public Class order
         Dim priceLabel As New Label()
         priceLabel.Text = "Rp. " + (item.Value.ToString)
         priceLabel.AutoSize = True
-        priceLabel.Location = New Point(852, 29) ' Posisi label di atas gambar
-        priceLabel.ForeColor = Color.Black
+        priceLabel.Location = New Point(623, 19)
+        priceLabel.ForeColor = Color.White
         priceLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
         priceLabel.Font = New Font("Microsoft Sans Serif", 14.25, FontStyle.Bold)
 
@@ -232,4 +232,13 @@ Public Class order
 
         Return True
     End Function
+
+    Private Sub btn_order_Click(sender As Object, e As EventArgs) Handles btn_order.Click
+        selectedItem.Clear()
+        main_screen.selectedItem.Clear()
+        main_screen.Label_price.Text = "Rp. 0"
+        main_screen.Label_Count.Text = "0 Item"
+        main_screen.Show()
+        Me.Hide()
+    End Sub
 End Class
