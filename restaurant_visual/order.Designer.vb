@@ -33,7 +33,7 @@ Partial Class order
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BackButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btn_order = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -41,7 +41,7 @@ Partial Class order
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.ListMenu = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -65,7 +65,7 @@ Partial Class order
         Me.Panel1.SuspendLayout()
         CType(Me.logo_side_menu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.ListMenu.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -78,8 +78,9 @@ Partial Class order
         Me.Panel1.Controls.Add(Me.logo_side_menu)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(217, 594)
+        Me.Panel1.Size = New System.Drawing.Size(289, 731)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -87,9 +88,10 @@ Partial Class order
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label1.Location = New System.Drawing.Point(72, 239)
+        Me.Label1.Location = New System.Drawing.Point(96, 294)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 294)
+        Me.Label1.Size = New System.Drawing.Size(58, 378)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "R" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "E" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "C" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "E" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "I" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "P" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "T"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -99,9 +101,9 @@ Partial Class order
         Me.logo_side_menu.Dock = System.Windows.Forms.DockStyle.Top
         Me.logo_side_menu.Image = Global.restaurant_visual.My.Resources.Resources.Ellipse_2_small
         Me.logo_side_menu.Location = New System.Drawing.Point(0, 0)
-        Me.logo_side_menu.Margin = New System.Windows.Forms.Padding(10)
+        Me.logo_side_menu.Margin = New System.Windows.Forms.Padding(13, 12, 13, 12)
         Me.logo_side_menu.Name = "logo_side_menu"
-        Me.logo_side_menu.Size = New System.Drawing.Size(217, 190)
+        Me.logo_side_menu.Size = New System.Drawing.Size(289, 234)
         Me.logo_side_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.logo_side_menu.TabIndex = 1
         Me.logo_side_menu.TabStop = False
@@ -115,7 +117,7 @@ Partial Class order
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.BackButton)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.btn_order)
         Me.Panel2.Controls.Add(Me.TextBox6)
@@ -123,13 +125,14 @@ Partial Class order
         Me.Panel2.Controls.Add(Me.TextBox3)
         Me.Panel2.Controls.Add(Me.TextBox4)
         Me.Panel2.Controls.Add(Me.TextBox2)
-        Me.Panel2.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Panel2.Controls.Add(Me.ListMenu)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(217, 0)
+        Me.Panel2.Location = New System.Drawing.Point(289, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(876, 594)
+        Me.Panel2.Size = New System.Drawing.Size(1168, 731)
         Me.Panel2.TabIndex = 2
         '
         'Label7
@@ -137,9 +140,10 @@ Partial Class order
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(23, 456)
+        Me.Label7.Location = New System.Drawing.Point(31, 561)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(92, 13)
+        Me.Label7.Size = New System.Drawing.Size(118, 17)
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Changes (Rp. )"
         '
@@ -148,20 +152,22 @@ Partial Class order
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label6.Location = New System.Drawing.Point(428, 386)
+        Me.Label6.Location = New System.Drawing.Point(571, 475)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(110, 13)
+        Me.Label6.Size = New System.Drawing.Size(169, 17)
         Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Grand Total (Rp. )"
+        Me.Label6.Text = "Payment Money (Rp. )"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(22, 386)
+        Me.Label5.Location = New System.Drawing.Point(29, 475)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.Size = New System.Drawing.Size(101, 17)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Discount (%)"
         '
@@ -170,20 +176,22 @@ Partial Class order
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(23, 318)
+        Me.Label4.Location = New System.Drawing.Point(31, 391)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 13)
+        Me.Label4.Size = New System.Drawing.Size(142, 17)
         Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Price (Rp. )"
+        Me.Label4.Text = "Grand Total (Rp. )"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label17.Location = New System.Drawing.Point(26, 84)
+        Me.Label17.Location = New System.Drawing.Point(35, 103)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(75, 13)
+        Me.Label17.Size = New System.Drawing.Size(97, 17)
         Me.Label17.TabIndex = 21
         Me.Label17.Text = "Detail Order"
         '
@@ -192,33 +200,36 @@ Partial Class order
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(428, 13)
+        Me.Label3.Location = New System.Drawing.Point(571, 16)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 13)
+        Me.Label3.Size = New System.Drawing.Size(109, 17)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Cashier Name"
         '
-        'Button2
+        'BackButton
         '
-        Me.Button2.BackColor = System.Drawing.Color.Black
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(219, 537)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(200, 40)
-        Me.Button2.TabIndex = 19
-        Me.Button2.Text = "BACK"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BackButton.BackColor = System.Drawing.Color.Black
+        Me.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BackButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BackButton.Location = New System.Drawing.Point(292, 661)
+        Me.BackButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(267, 49)
+        Me.BackButton.TabIndex = 19
+        Me.BackButton.Text = "BACK"
+        Me.BackButton.UseVisualStyleBackColor = False
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(425, 537)
+        Me.Button1.Location = New System.Drawing.Point(567, 661)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 40)
+        Me.Button1.Size = New System.Drawing.Size(267, 49)
         Me.Button1.TabIndex = 18
         Me.Button1.Text = "PRINT INVOICE"
         Me.Button1.UseVisualStyleBackColor = False
@@ -229,75 +240,86 @@ Partial Class order
         Me.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_order.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_order.ForeColor = System.Drawing.SystemColors.Control
-        Me.btn_order.Location = New System.Drawing.Point(631, 537)
+        Me.btn_order.Location = New System.Drawing.Point(841, 661)
+        Me.btn_order.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_order.Name = "btn_order"
-        Me.btn_order.Size = New System.Drawing.Size(200, 40)
+        Me.btn_order.Size = New System.Drawing.Size(267, 49)
         Me.btn_order.TabIndex = 17
         Me.btn_order.Text = "FINISHED"
         Me.btn_order.UseVisualStyleBackColor = False
         '
         'TextBox6
         '
+        Me.TextBox6.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Location = New System.Drawing.Point(25, 479)
-        Me.TextBox6.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(33, 590)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox6.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox6.Multiline = True
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(806, 41)
+        Me.TextBox6.Size = New System.Drawing.Size(1075, 50)
         Me.TextBox6.TabIndex = 15
         '
         'TextBox5
         '
         Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Location = New System.Drawing.Point(431, 407)
-        Me.TextBox5.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox5.Location = New System.Drawing.Point(575, 501)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox5.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox5.Multiline = True
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(400, 40)
+        Me.TextBox5.Size = New System.Drawing.Size(533, 49)
         Me.TextBox5.TabIndex = 13
         '
         'TextBox3
         '
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Location = New System.Drawing.Point(25, 407)
-        Me.TextBox3.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox3.Location = New System.Drawing.Point(33, 501)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox3.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(400, 40)
+        Me.TextBox3.Size = New System.Drawing.Size(533, 49)
         Me.TextBox3.TabIndex = 9
         '
         'TextBox4
         '
+        Me.TextBox4.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Location = New System.Drawing.Point(25, 339)
-        Me.TextBox4.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(33, 417)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox4.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(806, 40)
+        Me.TextBox4.Size = New System.Drawing.Size(1075, 49)
         Me.TextBox4.TabIndex = 8
         '
         'TextBox2
         '
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(431, 35)
-        Me.TextBox2.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox2.Location = New System.Drawing.Point(575, 43)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(400, 40)
+        Me.TextBox2.Size = New System.Drawing.Size(533, 49)
         Me.TextBox2.TabIndex = 7
         '
-        'FlowLayoutPanel1
+        'ListMenu
         '
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel5)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel3)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel4)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(25, 104)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(5)
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(806, 211)
-        Me.FlowLayoutPanel1.TabIndex = 4
+        Me.ListMenu.AutoScroll = True
+        Me.ListMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ListMenu.Controls.Add(Me.Panel5)
+        Me.ListMenu.Controls.Add(Me.Panel3)
+        Me.ListMenu.Controls.Add(Me.Panel4)
+        Me.ListMenu.Location = New System.Drawing.Point(33, 128)
+        Me.ListMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListMenu.Name = "ListMenu"
+        Me.ListMenu.Padding = New System.Windows.Forms.Padding(7, 6, 7, 6)
+        Me.ListMenu.Size = New System.Drawing.Size(1074, 259)
+        Me.ListMenu.TabIndex = 4
         '
         'Panel5
         '
@@ -306,18 +328,20 @@ Partial Class order
         Me.Panel5.Controls.Add(Me.Label15)
         Me.Panel5.Controls.Add(Me.Label16)
         Me.Panel5.Controls.Add(Me.Button4)
-        Me.Panel5.Location = New System.Drawing.Point(8, 8)
+        Me.Panel5.Location = New System.Drawing.Point(11, 10)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(771, 73)
+        Me.Panel5.Size = New System.Drawing.Size(1028, 90)
         Me.Panel5.TabIndex = 6
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(639, 29)
+        Me.Label14.Location = New System.Drawing.Point(852, 36)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(120, 24)
+        Me.Label14.Size = New System.Drawing.Size(151, 29)
         Me.Label14.TabIndex = 4
         Me.Label14.Text = "Rp. 150.000"
         '
@@ -325,9 +349,10 @@ Partial Class order
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(124, 40)
+        Me.Label15.Location = New System.Drawing.Point(165, 49)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(23, 13)
+        Me.Label15.Size = New System.Drawing.Size(29, 17)
         Me.Label15.TabIndex = 3
         Me.Label15.Text = "X 5"
         '
@@ -335,9 +360,10 @@ Partial Class order
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(124, 24)
+        Me.Label16.Location = New System.Drawing.Point(165, 30)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(90, 13)
+        Me.Label16.Size = New System.Drawing.Size(115, 17)
         Me.Label16.TabIndex = 2
         Me.Label16.Text = "Special Burger"
         '
@@ -351,8 +377,9 @@ Partial Class order
         Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Location = New System.Drawing.Point(0, 0)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(105, 73)
+        Me.Button4.Size = New System.Drawing.Size(140, 90)
         Me.Button4.TabIndex = 1
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -363,18 +390,20 @@ Partial Class order
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.Button3)
-        Me.Panel3.Location = New System.Drawing.Point(8, 87)
+        Me.Panel3.Location = New System.Drawing.Point(11, 108)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(771, 73)
+        Me.Panel3.Size = New System.Drawing.Size(1028, 90)
         Me.Panel3.TabIndex = 5
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(639, 29)
+        Me.Label11.Location = New System.Drawing.Point(852, 36)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(120, 24)
+        Me.Label11.Size = New System.Drawing.Size(151, 29)
         Me.Label11.TabIndex = 4
         Me.Label11.Text = "Rp. 150.000"
         '
@@ -382,9 +411,10 @@ Partial Class order
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(124, 40)
+        Me.Label12.Location = New System.Drawing.Point(165, 49)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(23, 13)
+        Me.Label12.Size = New System.Drawing.Size(29, 17)
         Me.Label12.TabIndex = 3
         Me.Label12.Text = "X 5"
         '
@@ -392,9 +422,10 @@ Partial Class order
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(124, 24)
+        Me.Label13.Location = New System.Drawing.Point(165, 30)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(90, 13)
+        Me.Label13.Size = New System.Drawing.Size(115, 17)
         Me.Label13.TabIndex = 2
         Me.Label13.Text = "Special Burger"
         '
@@ -408,8 +439,9 @@ Partial Class order
         Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Location = New System.Drawing.Point(0, 0)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(105, 73)
+        Me.Button3.Size = New System.Drawing.Size(140, 90)
         Me.Button3.TabIndex = 1
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -420,18 +452,20 @@ Partial Class order
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.Label8)
         Me.Panel4.Controls.Add(Me.burger_1)
-        Me.Panel4.Location = New System.Drawing.Point(8, 166)
+        Me.Panel4.Location = New System.Drawing.Point(11, 206)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(771, 73)
+        Me.Panel4.Size = New System.Drawing.Size(1028, 90)
         Me.Panel4.TabIndex = 2
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(639, 29)
+        Me.Label10.Location = New System.Drawing.Point(852, 36)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(120, 24)
+        Me.Label10.Size = New System.Drawing.Size(151, 29)
         Me.Label10.TabIndex = 4
         Me.Label10.Text = "Rp. 150.000"
         '
@@ -439,9 +473,10 @@ Partial Class order
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(124, 40)
+        Me.Label9.Location = New System.Drawing.Point(165, 49)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(23, 13)
+        Me.Label9.Size = New System.Drawing.Size(29, 17)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "X 5"
         '
@@ -449,9 +484,10 @@ Partial Class order
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(124, 24)
+        Me.Label8.Location = New System.Drawing.Point(165, 30)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(90, 13)
+        Me.Label8.Size = New System.Drawing.Size(115, 17)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Special Burger"
         '
@@ -465,8 +501,9 @@ Partial Class order
         Me.burger_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.burger_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.burger_1.Location = New System.Drawing.Point(0, 0)
+        Me.burger_1.Margin = New System.Windows.Forms.Padding(4)
         Me.burger_1.Name = "burger_1"
-        Me.burger_1.Size = New System.Drawing.Size(105, 73)
+        Me.burger_1.Size = New System.Drawing.Size(140, 90)
         Me.burger_1.TabIndex = 1
         Me.burger_1.UseVisualStyleBackColor = True
         '
@@ -475,20 +512,22 @@ Partial Class order
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(23, 13)
+        Me.Label2.Location = New System.Drawing.Point(31, 16)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 13)
+        Me.Label2.Size = New System.Drawing.Size(122, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Customer Name"
         '
         'TextBox1
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(25, 35)
-        Me.TextBox1.MinimumSize = New System.Drawing.Size(0, 40)
+        Me.TextBox1.Location = New System.Drawing.Point(33, 43)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.MinimumSize = New System.Drawing.Size(0, 49)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(400, 40)
+        Me.TextBox1.Size = New System.Drawing.Size(533, 49)
         Me.TextBox1.TabIndex = 0
         '
         'PrintDocument1
@@ -510,12 +549,13 @@ Partial Class order
         '
         'order
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1093, 594)
+        Me.ClientSize = New System.Drawing.Size(1457, 731)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "order"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "order"
@@ -524,7 +564,7 @@ Partial Class order
         CType(Me.logo_side_menu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.ListMenu.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -541,13 +581,13 @@ Partial Class order
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents ListMenu As FlowLayoutPanel
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BackButton As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btn_order As Button
     Friend WithEvents Panel4 As Panel

@@ -1,15 +1,20 @@
 ﻿Public Class detail
     Public selectedItem As New List(Of ItemObject)()
-    Public isTakeaway As Boolean
 
     Private Sub Button_DineIn_Click(sender As Object, e As EventArgs) Handles Button_DineIn.Click
-        isTakeaway = False
-        order.Show()
+        Dim orderShow As New order
+        orderShow.selectedItem = selectedItem
+        orderShow.isTakeaway = False
+
+        orderShow.Show()
         Me.Hide()
     End Sub
     Private Sub Button_Takeaway_Click(sender As Object, e As EventArgs) Handles Button_Takeaway.Click
-        isTakeaway = True
-        order.Show()
+        Dim orderShow As New order
+        orderShow.selectedItem = selectedItem
+        orderShow.isTakeaway = True
+
+        orderShow.Show()
         Me.Hide()
     End Sub
 

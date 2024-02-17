@@ -72,8 +72,9 @@ Partial Class main_screen
         Me.panel_menu.Controls.Add(Me.logo_side_menu)
         Me.panel_menu.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel_menu.Location = New System.Drawing.Point(0, 0)
+        Me.panel_menu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panel_menu.Name = "panel_menu"
-        Me.panel_menu.Size = New System.Drawing.Size(208, 672)
+        Me.panel_menu.Size = New System.Drawing.Size(277, 827)
         Me.panel_menu.TabIndex = 0
         '
         'MenuGroup
@@ -86,9 +87,10 @@ Partial Class main_screen
         Me.MenuGroup.Controls.Add(Me.burger_btn)
         Me.MenuGroup.Controls.Add(Me.all_menu_btn)
         Me.MenuGroup.Dock = System.Windows.Forms.DockStyle.Left
-        Me.MenuGroup.Location = New System.Drawing.Point(0, 190)
+        Me.MenuGroup.Location = New System.Drawing.Point(0, 234)
+        Me.MenuGroup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MenuGroup.Name = "MenuGroup"
-        Me.MenuGroup.Size = New System.Drawing.Size(208, 482)
+        Me.MenuGroup.Size = New System.Drawing.Size(277, 593)
         Me.MenuGroup.TabIndex = 1
         '
         'drinks_btn
@@ -101,9 +103,10 @@ Partial Class main_screen
         Me.drinks_btn.ForeColor = System.Drawing.Color.Transparent
         Me.drinks_btn.Image = Global.restaurant_visual.My.Resources.Resources.drinks
         Me.drinks_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.drinks_btn.Location = New System.Drawing.Point(3, 546)
+        Me.drinks_btn.Location = New System.Drawing.Point(4, 672)
+        Me.drinks_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.drinks_btn.Name = "drinks_btn"
-        Me.drinks_btn.Size = New System.Drawing.Size(185, 125)
+        Me.drinks_btn.Size = New System.Drawing.Size(247, 154)
         Me.drinks_btn.TabIndex = 4
         Me.drinks_btn.Text = "DRINK"
         Me.drinks_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -119,9 +122,10 @@ Partial Class main_screen
         Me.HOTDOG_BTN.ForeColor = System.Drawing.Color.Transparent
         Me.HOTDOG_BTN.Image = Global.restaurant_visual.My.Resources.Resources.hotdog
         Me.HOTDOG_BTN.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.HOTDOG_BTN.Location = New System.Drawing.Point(3, 412)
+        Me.HOTDOG_BTN.Location = New System.Drawing.Point(4, 507)
+        Me.HOTDOG_BTN.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.HOTDOG_BTN.Name = "HOTDOG_BTN"
-        Me.HOTDOG_BTN.Size = New System.Drawing.Size(185, 125)
+        Me.HOTDOG_BTN.Size = New System.Drawing.Size(247, 154)
         Me.HOTDOG_BTN.TabIndex = 3
         Me.HOTDOG_BTN.Text = "HOTDOG"
         Me.HOTDOG_BTN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -137,9 +141,10 @@ Partial Class main_screen
         Me.pizza_btn.ForeColor = System.Drawing.Color.Transparent
         Me.pizza_btn.Image = Global.restaurant_visual.My.Resources.Resources.pizza
         Me.pizza_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.pizza_btn.Location = New System.Drawing.Point(3, 284)
+        Me.pizza_btn.Location = New System.Drawing.Point(4, 350)
+        Me.pizza_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pizza_btn.Name = "pizza_btn"
-        Me.pizza_btn.Size = New System.Drawing.Size(185, 125)
+        Me.pizza_btn.Size = New System.Drawing.Size(247, 154)
         Me.pizza_btn.TabIndex = 2
         Me.pizza_btn.Text = "PIZZA"
         Me.pizza_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -155,9 +160,10 @@ Partial Class main_screen
         Me.burger_btn.ForeColor = System.Drawing.Color.Transparent
         Me.burger_btn.Image = Global.restaurant_visual.My.Resources.Resources.burgers
         Me.burger_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.burger_btn.Location = New System.Drawing.Point(3, 153)
+        Me.burger_btn.Location = New System.Drawing.Point(4, 188)
+        Me.burger_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.burger_btn.Name = "burger_btn"
-        Me.burger_btn.Size = New System.Drawing.Size(185, 125)
+        Me.burger_btn.Size = New System.Drawing.Size(247, 154)
         Me.burger_btn.TabIndex = 1
         Me.burger_btn.Text = "BURGER"
         Me.burger_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -173,9 +179,10 @@ Partial Class main_screen
         Me.all_menu_btn.ForeColor = System.Drawing.Color.Transparent
         Me.all_menu_btn.Image = Global.restaurant_visual.My.Resources.Resources.all_menu
         Me.all_menu_btn.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.all_menu_btn.Location = New System.Drawing.Point(3, 8)
+        Me.all_menu_btn.Location = New System.Drawing.Point(4, 10)
+        Me.all_menu_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.all_menu_btn.Name = "all_menu_btn"
-        Me.all_menu_btn.Size = New System.Drawing.Size(185, 125)
+        Me.all_menu_btn.Size = New System.Drawing.Size(247, 154)
         Me.all_menu_btn.TabIndex = 0
         Me.all_menu_btn.Text = "ALL MENU"
         Me.all_menu_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -186,9 +193,9 @@ Partial Class main_screen
         Me.logo_side_menu.Dock = System.Windows.Forms.DockStyle.Top
         Me.logo_side_menu.Image = Global.restaurant_visual.My.Resources.Resources.Ellipse_2_small
         Me.logo_side_menu.Location = New System.Drawing.Point(0, 0)
-        Me.logo_side_menu.Margin = New System.Windows.Forms.Padding(10)
+        Me.logo_side_menu.Margin = New System.Windows.Forms.Padding(13, 12, 13, 12)
         Me.logo_side_menu.Name = "logo_side_menu"
-        Me.logo_side_menu.Size = New System.Drawing.Size(208, 190)
+        Me.logo_side_menu.Size = New System.Drawing.Size(277, 234)
         Me.logo_side_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.logo_side_menu.TabIndex = 0
         Me.logo_side_menu.TabStop = False
@@ -200,17 +207,19 @@ Partial Class main_screen
         Me.Panel2.Controls.Add(Me.PictureBox2)
         Me.Panel2.Controls.Add(Me.breadcump_label)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(208, 0)
+        Me.Panel2.Location = New System.Drawing.Point(277, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(917, 45)
+        Me.Panel2.Size = New System.Drawing.Size(1223, 55)
         Me.Panel2.TabIndex = 0
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.restaurant_visual.My.Resources.Resources.minimize_btn
-        Me.PictureBox3.Location = New System.Drawing.Point(827, 6)
+        Me.PictureBox3.Location = New System.Drawing.Point(1103, 7)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(38, 32)
+        Me.PictureBox3.Size = New System.Drawing.Size(51, 39)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
@@ -218,9 +227,10 @@ Partial Class main_screen
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.restaurant_visual.My.Resources.Resources.exit_button_fix
-        Me.PictureBox2.Location = New System.Drawing.Point(869, 7)
+        Me.PictureBox2.Location = New System.Drawing.Point(1159, 9)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(37, 32)
+        Me.PictureBox2.Size = New System.Drawing.Size(49, 39)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
@@ -229,9 +239,10 @@ Partial Class main_screen
         '
         Me.breadcump_label.AutoSize = True
         Me.breadcump_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.breadcump_label.Location = New System.Drawing.Point(10, 9)
+        Me.breadcump_label.Location = New System.Drawing.Point(13, 11)
+        Me.breadcump_label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.breadcump_label.Name = "breadcump_label"
-        Me.breadcump_label.Size = New System.Drawing.Size(112, 24)
+        Me.breadcump_label.Size = New System.Drawing.Size(139, 29)
         Me.breadcump_label.TabIndex = 0
         Me.breadcump_label.Text = "ALL MENU"
         Me.breadcump_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -246,18 +257,20 @@ Partial Class main_screen
         Me.main_panel.Controls.Add(Me.PictureBox1)
         Me.main_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.main_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.main_panel.Location = New System.Drawing.Point(208, 45)
+        Me.main_panel.Location = New System.Drawing.Point(277, 55)
+        Me.main_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.main_panel.Name = "main_panel"
-        Me.main_panel.Size = New System.Drawing.Size(917, 627)
+        Me.main_panel.Size = New System.Drawing.Size(1223, 772)
         Me.main_panel.TabIndex = 1
         '
         'btn_order
         '
         Me.btn_order.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(95, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_order.Location = New System.Drawing.Point(707, 575)
+        Me.btn_order.Location = New System.Drawing.Point(943, 708)
+        Me.btn_order.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btn_order.Name = "btn_order"
-        Me.btn_order.Size = New System.Drawing.Size(200, 40)
+        Me.btn_order.Size = New System.Drawing.Size(267, 49)
         Me.btn_order.TabIndex = 3
         Me.btn_order.Text = "ORDER NOW"
         Me.btn_order.UseVisualStyleBackColor = False
@@ -268,9 +281,10 @@ Partial Class main_screen
         Me.panel_price.Controls.Add(Me.Label_Count)
         Me.panel_price.Controls.Add(Me.Label_price)
         Me.panel_price.Controls.Add(Me.Label2)
-        Me.panel_price.Location = New System.Drawing.Point(232, 575)
+        Me.panel_price.Location = New System.Drawing.Point(309, 708)
+        Me.panel_price.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panel_price.Name = "panel_price"
-        Me.panel_price.Size = New System.Drawing.Size(458, 40)
+        Me.panel_price.Size = New System.Drawing.Size(611, 49)
         Me.panel_price.TabIndex = 2
         '
         'Label_Count
@@ -278,9 +292,10 @@ Partial Class main_screen
         Me.Label_Count.AutoSize = True
         Me.Label_Count.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Count.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label_Count.Location = New System.Drawing.Point(208, 10)
+        Me.Label_Count.Location = New System.Drawing.Point(277, 12)
+        Me.Label_Count.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_Count.Name = "Label_Count"
-        Me.Label_Count.Size = New System.Drawing.Size(54, 20)
+        Me.Label_Count.Size = New System.Drawing.Size(65, 25)
         Me.Label_Count.TabIndex = 2
         Me.Label_Count.Text = "0 Item"
         '
@@ -289,9 +304,10 @@ Partial Class main_screen
         Me.Label_price.AutoSize = True
         Me.Label_price.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_price.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label_price.Location = New System.Drawing.Point(344, 10)
+        Me.Label_price.Location = New System.Drawing.Point(459, 12)
+        Me.Label_price.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_price.Name = "Label_price"
-        Me.Label_price.Size = New System.Drawing.Size(47, 20)
+        Me.Label_price.Size = New System.Drawing.Size(57, 25)
         Me.Label_price.TabIndex = 1
         Me.Label_price.Text = "Rp. 0"
         '
@@ -300,9 +316,10 @@ Partial Class main_screen
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label2.Location = New System.Drawing.Point(9, 10)
+        Me.Label2.Location = New System.Drawing.Point(12, 12)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 20)
+        Me.Label2.Size = New System.Drawing.Size(153, 25)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "TOTAL ORDER"
         '
@@ -310,9 +327,10 @@ Partial Class main_screen
         '
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel1)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 212)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(19, 261)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(892, 342)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1189, 421)
         Me.FlowLayoutPanel1.TabIndex = 1
         '
         'Panel1
@@ -320,9 +338,10 @@ Partial Class main_screen
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.burger1label)
         Me.Panel1.Controls.Add(Me.burger_1)
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Location = New System.Drawing.Point(4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(105, 142)
+        Me.Panel1.Size = New System.Drawing.Size(140, 175)
         Me.Panel1.TabIndex = 0
         '
         'Label1
@@ -332,9 +351,10 @@ Partial Class main_screen
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(17, 115)
+        Me.Label1.Location = New System.Drawing.Point(23, 142)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 15)
+        Me.Label1.Size = New System.Drawing.Size(89, 18)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Rp. 50.000"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -346,9 +366,10 @@ Partial Class main_screen
         Me.burger1label.AutoSize = True
         Me.burger1label.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.burger1label.ForeColor = System.Drawing.Color.Black
-        Me.burger1label.Location = New System.Drawing.Point(17, 96)
+        Me.burger1label.Location = New System.Drawing.Point(23, 118)
+        Me.burger1label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.burger1label.Name = "burger1label"
-        Me.burger1label.Size = New System.Drawing.Size(75, 15)
+        Me.burger1label.Size = New System.Drawing.Size(87, 18)
         Me.burger1label.TabIndex = 1
         Me.burger1label.Text = "Big Burger"
         Me.burger1label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -363,8 +384,9 @@ Partial Class main_screen
         Me.burger_1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.burger_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.burger_1.Location = New System.Drawing.Point(0, 0)
+        Me.burger_1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.burger_1.Name = "burger_1"
-        Me.burger_1.Size = New System.Drawing.Size(105, 93)
+        Me.burger_1.Size = New System.Drawing.Size(140, 114)
         Me.burger_1.TabIndex = 0
         Me.burger_1.UseVisualStyleBackColor = True
         '
@@ -372,9 +394,10 @@ Partial Class main_screen
         '
         Me.clear_btn.BackColor = System.Drawing.Color.Red
         Me.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.clear_btn.Location = New System.Drawing.Point(14, 575)
+        Me.clear_btn.Location = New System.Drawing.Point(19, 708)
+        Me.clear_btn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.clear_btn.Name = "clear_btn"
-        Me.clear_btn.Size = New System.Drawing.Size(200, 40)
+        Me.clear_btn.Size = New System.Drawing.Size(267, 49)
         Me.clear_btn.TabIndex = 1
         Me.clear_btn.Text = "RESET"
         Me.clear_btn.UseVisualStyleBackColor = False
@@ -382,9 +405,10 @@ Partial Class main_screen
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.restaurant_visual.My.Resources.Resources.image_1
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(19, 23)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(892, 187)
+        Me.PictureBox1.Size = New System.Drawing.Size(1189, 230)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -394,9 +418,10 @@ Partial Class main_screen
         Me.burger_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.burger_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.burger_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.burger_panel.Location = New System.Drawing.Point(208, 45)
+        Me.burger_panel.Location = New System.Drawing.Point(277, 55)
+        Me.burger_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.burger_panel.Name = "burger_panel"
-        Me.burger_panel.Size = New System.Drawing.Size(917, 627)
+        Me.burger_panel.Size = New System.Drawing.Size(1223, 772)
         Me.burger_panel.TabIndex = 2
         '
         'pizza_panel
@@ -404,9 +429,10 @@ Partial Class main_screen
         Me.pizza_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.pizza_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pizza_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.pizza_panel.Location = New System.Drawing.Point(208, 45)
+        Me.pizza_panel.Location = New System.Drawing.Point(277, 55)
+        Me.pizza_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pizza_panel.Name = "pizza_panel"
-        Me.pizza_panel.Size = New System.Drawing.Size(917, 627)
+        Me.pizza_panel.Size = New System.Drawing.Size(1223, 772)
         Me.pizza_panel.TabIndex = 3
         '
         'hotdog_panel
@@ -414,9 +440,10 @@ Partial Class main_screen
         Me.hotdog_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.hotdog_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.hotdog_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.hotdog_panel.Location = New System.Drawing.Point(208, 45)
+        Me.hotdog_panel.Location = New System.Drawing.Point(277, 55)
+        Me.hotdog_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.hotdog_panel.Name = "hotdog_panel"
-        Me.hotdog_panel.Size = New System.Drawing.Size(917, 627)
+        Me.hotdog_panel.Size = New System.Drawing.Size(1223, 772)
         Me.hotdog_panel.TabIndex = 4
         '
         'drink_panel
@@ -424,17 +451,18 @@ Partial Class main_screen
         Me.drink_panel.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.drink_panel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.drink_panel.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.drink_panel.Location = New System.Drawing.Point(208, 45)
+        Me.drink_panel.Location = New System.Drawing.Point(277, 55)
+        Me.drink_panel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.drink_panel.Name = "drink_panel"
-        Me.drink_panel.Size = New System.Drawing.Size(917, 627)
+        Me.drink_panel.Size = New System.Drawing.Size(1223, 772)
         Me.drink_panel.TabIndex = 5
         '
         'main_screen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1125, 672)
+        Me.ClientSize = New System.Drawing.Size(1500, 827)
         Me.Controls.Add(Me.main_panel)
         Me.Controls.Add(Me.drink_panel)
         Me.Controls.Add(Me.hotdog_panel)
@@ -443,6 +471,7 @@ Partial Class main_screen
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.panel_menu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "main_screen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "main_screen"
