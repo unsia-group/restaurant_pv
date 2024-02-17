@@ -10,13 +10,9 @@ Public Class main_screen
     Public selectedItem As New List(Of ItemObject)()
 
     Private Sub main_screen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        main_panel.Show()
-        burger_panel.Hide()
-        pizza_panel.Hide()
-        hotdog_panel.Hide()
-        drink_panel.Hide()
-
+        FlowLayoutPanel1.Show()
         FlowLayoutPanel1.Controls.Clear()
+
         LoadListBurger()
         LoadListPizza()
         LoadListHotdog()
@@ -33,37 +29,45 @@ Public Class main_screen
 
     Private Sub ShowPanel(panelToShow As Panel)
         main_panel.Hide()
-        burger_panel.Hide()
-        pizza_panel.Hide()
-        hotdog_panel.Hide()
-        drink_panel.Hide()
-
         panelToShow.Show()
     End Sub
 
     Private Sub all_menu_btn_Click(sender As Object, e As EventArgs) Handles all_menu_btn.Click
         breadcump_label.Text = "All Menu"
-        ShowPanel(main_panel)
+        FlowLayoutPanel1.Show()
+        FlowLayoutPanel1.Controls.Clear()
+        LoadListBurger()
+        LoadListPizza()
+        LoadListHotdog()
+        LoadListDrink()
     End Sub
 
     Private Sub burger_btn_Click(sender As Object, e As EventArgs) Handles burger_btn.Click
         breadcump_label.Text = "Burger"
-        ShowPanel(burger_panel)
+        FlowLayoutPanel1.Show()
+        FlowLayoutPanel1.Controls.Clear()
+        LoadListBurger()
     End Sub
 
     Private Sub HOTDOG_BTN_Click(sender As Object, e As EventArgs) Handles HOTDOG_BTN.Click
         breadcump_label.Text = "Hotdog"
-        ShowPanel(hotdog_panel)
+        FlowLayoutPanel1.Show()
+        FlowLayoutPanel1.Controls.Clear()
+        LoadListHotdog()
     End Sub
 
     Private Sub drinks_btn_Click(sender As Object, e As EventArgs) Handles drinks_btn.Click
         breadcump_label.Text = "Drink"
-        ShowPanel(drink_panel)
+        FlowLayoutPanel1.Show()
+        FlowLayoutPanel1.Controls.Clear()
+        LoadListDrink()
     End Sub
 
     Private Sub pizza_btn_Click(sender As Object, e As EventArgs) Handles pizza_btn.Click
         breadcump_label.Text = "Pizza"
-        ShowPanel(pizza_panel)
+        FlowLayoutPanel1.Show()
+        FlowLayoutPanel1.Controls.Clear()
+        LoadListPizza()
     End Sub
 
     Private Sub btn_order_Click(sender As Object, e As EventArgs) Handles btn_order.Click
@@ -111,7 +115,6 @@ Public Class main_screen
 
             For Each burger As JObject In listBurger
                 Dim itemPanel = Await loadListItem(burger)
-
                 FlowLayoutPanel1.Controls.Add(itemPanel)
             Next
         Else
