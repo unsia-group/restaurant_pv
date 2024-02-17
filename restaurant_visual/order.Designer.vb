@@ -36,11 +36,11 @@ Partial Class order
         Me.BackButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btn_order = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.changesInput = New System.Windows.Forms.TextBox()
+        Me.paymentInput = New System.Windows.Forms.TextBox()
+        Me.DiscountInput = New System.Windows.Forms.TextBox()
+        Me.GrandTotalInput = New System.Windows.Forms.TextBox()
+        Me.cashierNameInput = New System.Windows.Forms.TextBox()
         Me.ListMenu = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class order
         Me.Label8 = New System.Windows.Forms.Label()
         Me.burger_1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.customerNameInput = New System.Windows.Forms.TextBox()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
@@ -120,14 +120,14 @@ Partial Class order
         Me.Panel2.Controls.Add(Me.BackButton)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.btn_order)
-        Me.Panel2.Controls.Add(Me.TextBox6)
-        Me.Panel2.Controls.Add(Me.TextBox5)
-        Me.Panel2.Controls.Add(Me.TextBox3)
-        Me.Panel2.Controls.Add(Me.TextBox4)
-        Me.Panel2.Controls.Add(Me.TextBox2)
+        Me.Panel2.Controls.Add(Me.changesInput)
+        Me.Panel2.Controls.Add(Me.paymentInput)
+        Me.Panel2.Controls.Add(Me.DiscountInput)
+        Me.Panel2.Controls.Add(Me.GrandTotalInput)
+        Me.Panel2.Controls.Add(Me.cashierNameInput)
         Me.Panel2.Controls.Add(Me.ListMenu)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Controls.Add(Me.customerNameInput)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel2.Location = New System.Drawing.Point(289, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
@@ -248,64 +248,64 @@ Partial Class order
         Me.btn_order.Text = "FINISHED"
         Me.btn_order.UseVisualStyleBackColor = False
         '
-        'TextBox6
+        'changesInput
         '
-        Me.TextBox6.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(33, 590)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox6.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(1075, 50)
-        Me.TextBox6.TabIndex = 15
+        Me.changesInput.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.changesInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.changesInput.Enabled = False
+        Me.changesInput.Location = New System.Drawing.Point(33, 590)
+        Me.changesInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.changesInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.changesInput.Multiline = True
+        Me.changesInput.Name = "changesInput"
+        Me.changesInput.Size = New System.Drawing.Size(1075, 50)
+        Me.changesInput.TabIndex = 15
         '
-        'TextBox5
+        'paymentInput
         '
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Location = New System.Drawing.Point(575, 501)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(533, 49)
-        Me.TextBox5.TabIndex = 13
+        Me.paymentInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.paymentInput.Location = New System.Drawing.Point(575, 501)
+        Me.paymentInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.paymentInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.paymentInput.Multiline = True
+        Me.paymentInput.Name = "paymentInput"
+        Me.paymentInput.Size = New System.Drawing.Size(533, 49)
+        Me.paymentInput.TabIndex = 13
         '
-        'TextBox3
+        'DiscountInput
         '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Location = New System.Drawing.Point(33, 501)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox3.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(533, 49)
-        Me.TextBox3.TabIndex = 9
+        Me.DiscountInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DiscountInput.Location = New System.Drawing.Point(33, 501)
+        Me.DiscountInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.DiscountInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.DiscountInput.Multiline = True
+        Me.DiscountInput.Name = "DiscountInput"
+        Me.DiscountInput.Size = New System.Drawing.Size(533, 49)
+        Me.DiscountInput.TabIndex = 9
         '
-        'TextBox4
+        'GrandTotalInput
         '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(33, 417)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox4.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(1075, 49)
-        Me.TextBox4.TabIndex = 8
+        Me.GrandTotalInput.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.GrandTotalInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.GrandTotalInput.Enabled = False
+        Me.GrandTotalInput.Location = New System.Drawing.Point(33, 417)
+        Me.GrandTotalInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.GrandTotalInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.GrandTotalInput.Multiline = True
+        Me.GrandTotalInput.Name = "GrandTotalInput"
+        Me.GrandTotalInput.Size = New System.Drawing.Size(1075, 49)
+        Me.GrandTotalInput.TabIndex = 8
         '
-        'TextBox2
+        'cashierNameInput
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Location = New System.Drawing.Point(575, 43)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(533, 49)
-        Me.TextBox2.TabIndex = 7
+        Me.cashierNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.cashierNameInput.Location = New System.Drawing.Point(575, 43)
+        Me.cashierNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.cashierNameInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.cashierNameInput.Multiline = True
+        Me.cashierNameInput.Name = "cashierNameInput"
+        Me.cashierNameInput.Size = New System.Drawing.Size(533, 49)
+        Me.cashierNameInput.TabIndex = 7
         '
         'ListMenu
         '
@@ -519,16 +519,16 @@ Partial Class order
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Customer Name"
         '
-        'TextBox1
+        'customerNameInput
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(33, 43)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.MinimumSize = New System.Drawing.Size(0, 49)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(533, 49)
-        Me.TextBox1.TabIndex = 0
+        Me.customerNameInput.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.customerNameInput.Location = New System.Drawing.Point(33, 43)
+        Me.customerNameInput.Margin = New System.Windows.Forms.Padding(4)
+        Me.customerNameInput.MinimumSize = New System.Drawing.Size(0, 49)
+        Me.customerNameInput.Multiline = True
+        Me.customerNameInput.Name = "customerNameInput"
+        Me.customerNameInput.Size = New System.Drawing.Size(533, 49)
+        Me.customerNameInput.TabIndex = 0
         '
         'PrintDocument1
         '
@@ -579,14 +579,14 @@ Partial Class order
     Friend WithEvents logo_side_menu As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents customerNameInput As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ListMenu As FlowLayoutPanel
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents DiscountInput As TextBox
+    Friend WithEvents GrandTotalInput As TextBox
+    Friend WithEvents cashierNameInput As TextBox
+    Friend WithEvents paymentInput As TextBox
+    Friend WithEvents changesInput As TextBox
     Friend WithEvents BackButton As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btn_order As Button

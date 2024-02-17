@@ -3,8 +3,17 @@
 Public Class order
     Public selectedItem As New List(Of ItemObject)()
     Public isTakeaway As Boolean
+    Public customerName As String
+    Public cashierName As String
+    Public discount As Double
+    Public payment As Double
+    Public grandTotalPrice As Double
 
     Private Sub order_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        customerName = ""
+        cashierName = ""
+        payment = 0
+
         ListMenu.Controls.Clear()
         loadList()
     End Sub
@@ -15,6 +24,12 @@ Public Class order
 
             ListMenu.Controls.Add(itemPanel)
         Next
+
+        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value * i.Count)
+
+        GrandTotalInput.Text = totalValue
+
+        Return True
     End Function
 
     Private Function loadListItem(item As ItemObject) As Panel
@@ -88,9 +103,9 @@ Public Class order
 
         ' Detail header.
         e.Graphics.DrawString("Receipt Date", font, brush, leftMargin, topMargin + 60)
-        e.Graphics.DrawString("12-12-2023 08:00", font, brush, leftMargin + 100, topMargin + 60)
+        e.Graphics.DrawString(DateTime.Now.ToString("dd/MM/yyyy"), font, brush, leftMargin + 100, topMargin + 60)
         e.Graphics.DrawString("By", font, brush, leftMargin, topMargin + 80)
-        e.Graphics.DrawString("David Setiawan", font, brush, leftMargin + 100, topMargin + 80)
+        e.Graphics.DrawString(cashierName, font, brush, leftMargin + 100, topMargin + 80)
 
         ' Items list.
         Dim yPos As Integer = topMargin + 120
@@ -102,11 +117,9 @@ Public Class order
             yPos += 15
         Next
 
-        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value * i.Count)
-
         ' Footer
         e.Graphics.DrawString("TOTAL", font, brush, leftMargin, yPos + 15)
-        e.Graphics.DrawString("Rp. " + totalValue.ToString(), font, brush, leftMargin + 250, yPos + 15)
+        e.Graphics.DrawString("Rp. " + grandTotalPrice.ToString(), font, brush, leftMargin + 250, yPos + 15)
 
         ' ... Add the DISC, GRAND TOTAL, and CHANGES the same way
 
@@ -118,6 +131,21 @@ Public Class order
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If selectedItem.Count = 0 Then
+            MessageBox.Show("No item selected")
+            Return
+        End If
+
+        If customerName = "" Or cashierName = "" Or payment = 0 Then
+            MessageBox.Show("Please fill all the required fields")
+            Return
+        End If
+
+        If payment < grandTotalPrice Then
+            MessageBox.Show("Payment is not enough")
+            Return
+        End If
+
         ' Jika Anda ingin menampilkan dialog cetak sebelumnya, gunakan PrintDialog
         If PrintDialog1.ShowDialog() = DialogResult.OK Then
             PrintPreviewDialog1.Document = PrintDocument1
@@ -126,7 +154,79 @@ Public Class order
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        detail.Show()
+        Dim detailShow As New detail
+        detailShow.selectedItem = selectedItem
+        detailShow.isTakeaway = isTakeaway
+
+        detailShow.Show()
         Me.Hide()
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles customerNameInput.TextChanged
+        customerName = customerNameInput.Text
+    End Sub
+
+    Private Sub cashierNameInput_TextChanged(sender As Object, e As EventArgs) Handles cashierNameInput.TextChanged
+        cashierName = cashierNameInput.Text
+    End Sub
+
+    Private Sub DiscountInput_KeyPress(sender As Object, e As KeyPressEventArgs) Handles DiscountInput.KeyPress
+        ' Allowing only digits, decimal point, and negative sign
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "." AndAlso Not e.KeyChar = "-" AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub paymentInput_KeyPress(sender As Object, e As KeyPressEventArgs) Handles paymentInput.KeyPress
+        ' Allowing only digits, decimal point, and negative sign
+        If Not Char.IsDigit(e.KeyChar) AndAlso Not e.KeyChar = "." AndAlso Not e.KeyChar = "-" AndAlso Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub DiscountInput_TextChanged(sender As Object, e As EventArgs) Handles DiscountInput.TextChanged
+        If DiscountInput.Text = "" Then
+            discount = 0
+            calcChanges()
+            Return
+        End If
+
+        Dim discountText = CInt(Int(DiscountInput.Text))
+
+        If discountText > 100 Then
+            DiscountInput.Text = 100
+        ElseIf discountText < 0 Then
+            DiscountInput.Text = 0
+        End If
+
+        discount = discountText
+
+        calcChanges()
+    End Sub
+
+    Private Sub paymentInput_TextChanged(sender As Object, e As EventArgs) Handles paymentInput.TextChanged
+        If paymentInput.Text = "" Then
+            payment = 0
+            calcChanges()
+            Return
+        End If
+
+        payment = CInt(Int(paymentInput.Text))
+
+        calcChanges()
+    End Sub
+
+    Private Function calcChanges()
+        Dim totalValue As Integer = selectedItem.Sum(Function(i) i.Value * i.Count)
+        Dim grandTotal = totalValue - (totalValue * (discount / 100))
+
+        GrandTotalInput.Text = grandTotal
+        grandTotalPrice = grandTotal
+
+        Dim changes = payment - grandTotal
+
+        changesInput.Text = changes
+
+        Return True
+    End Function
 End Class

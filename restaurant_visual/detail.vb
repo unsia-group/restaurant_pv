@@ -1,5 +1,6 @@
 ﻿Public Class detail
     Public selectedItem As New List(Of ItemObject)()
+    Public isTakeaway As Boolean
 
     Private Sub Button_DineIn_Click(sender As Object, e As EventArgs) Handles Button_DineIn.Click
         Dim orderShow As New order
