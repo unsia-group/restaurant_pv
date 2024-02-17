@@ -60,31 +60,34 @@ Public Class order
         nameLabel.Location = New Point(165, 30) ' Posisi label di atas gambar
         nameLabel.ForeColor = Color.Black
         nameLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+        nameLabel.Font = New Font("Microsoft Sans Serif", 8.25, FontStyle.Bold)
 
         Return nameLabel
+    End Function
+
+    Private Function SetupCountLabel(item As ItemObject) As Label
+        Dim countLabel As New Label()
+        countLabel.Text = item.Count.ToString
+        countLabel.AutoSize = True
+        countLabel.Location = New Point(165, 49) ' Posisi label di atas gambar
+        countLabel.ForeColor = Color.Black
+        countLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+        countLabel.Font = New Font("Microsoft Sans Serif", 8.25)
+
+        Return countLabel
     End Function
 
     Private Function SetupPriceLabel(item As ItemObject) As Label
         Dim priceLabel As New Label()
         priceLabel.Text = "Rp. " + (item.Value.ToString)
         priceLabel.AutoSize = True
-        priceLabel.Location = New Point(23, 142) ' Posisi label di atas gambar
+        priceLabel.Location = New Point(852, 29) ' Posisi label di atas gambar
         priceLabel.ForeColor = Color.Black
         priceLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
+        priceLabel.Font = New Font("Microsoft Sans Serif", 14.25, FontStyle.Bold)
 
         Return priceLabel
     End Function
-    Private Function SetupCountLabel(item As ItemObject) As Label
-        Dim countLabel As New Label()
-        countLabel.Text = item.Count.ToString
-        countLabel.AutoSize = True
-        countLabel.Location = New Point(852, 36) ' Posisi label di atas gambar
-        countLabel.ForeColor = Color.Black
-        countLabel.Anchor = AnchorStyles.Top Or AnchorStyles.Left
-
-        Return countLabel
-    End Function
-
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         ' Set up fonts and brushes.
